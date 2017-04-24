@@ -9,21 +9,22 @@
         android:id="@+id/map"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:foregroundGravity="center"/>
+        android:foregroundGravity="center"
+        android:background="@color/colorWhite"/>
     
     <android.support.v7.widget.CardView
         android:id="@+id/search_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="12dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
         app:cardBackgroundColor="@color/colorWhiteSmoke">
         
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
+            android:layout_height="48dp"
             android:background="?attr/selectableItemBackground"
             android:clickable="true"
             android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
@@ -37,7 +38,7 @@
                 android:text="Where to?"
                 android:textColor="@color/colorGray700"
                 android:textSize="16sp"/>
-        
+         
         </android.support.v7.widget.Toolbar>
     
     </android.support.v7.widget.CardView>

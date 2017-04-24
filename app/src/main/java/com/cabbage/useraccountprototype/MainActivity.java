@@ -1,10 +1,12 @@
 package com.cabbage.useraccountprototype;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -43,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(mToolbar);
         if (getSupportActionBar() != null) {
             getSupportActionBar().setTitle("");
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         } else {
             throw new RuntimeException("Can not find toolbar");
         }
@@ -87,7 +90,9 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public boolean onItemClick(View view, int position, IDrawerItem drawerItem) {
                         if (drawerItem.getIdentifier() == 0) {
-                            Toast.makeText(MainActivity.this, "Register", Toast.LENGTH_SHORT).show();
+//                            Toast.makeText(MainActivity.this, "Register", Toast.LENGTH_SHORT).show();
+                            Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+                            MainActivity.this.startActivity(intent);
                         }
                         return true;
                     }
